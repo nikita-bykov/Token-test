@@ -1,0 +1,7 @@
+{
+  "name": "Token-test",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikita-bykov/Token-test.git"
+  }
+}
