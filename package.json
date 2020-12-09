@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "@nikita-bykov/Token-test",
+  "name": "@nikita-bykov/token-test",
   "description": "description",
   "author": {
     "name": "nikita-bykov",
@@ -8,9 +8,9 @@
   },
   "repository": {
       "type": "git",
-      "url": "git+https://github.com/nikita-bykov/Token-test.git"
+      "url": "git+https://github.com/nikita-bykov/token-test.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/yourOrganizationOrAccount"
+    "registry": "https://npm.pkg.github.com/nikita-bykov"
   }
 }
