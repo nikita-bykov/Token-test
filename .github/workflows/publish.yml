@@ -22,3 +22,5 @@ jobs:
            cat .npmrc
     - run: npm install
     - run: npm publish
+      env:
+        NPM_CONFIG_USERCONFIG: ${{ RUNNER_TEMP }}
