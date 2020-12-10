@@ -8,11 +8,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     # Setup .npmrc file to publish to GitHub Packages
-    - run: ls
     - uses: nikita-bykov/setup-node@token
       with:
         node-version: '12.x'
         registry-url: 'https://npm.pkg.github.com'
         scope: '@nikita-bykov'
+    - run: ls
     - run: npm install
     - run: npm publish
