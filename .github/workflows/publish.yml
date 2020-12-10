@@ -21,6 +21,6 @@ jobs:
         scope: '@nikita-bykov'
     - run: |
            cd $RUNNER_TEMP
-           cat .npmrc
+           ls -la
     - run: npm install
     - run: npm publish
