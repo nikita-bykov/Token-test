@@ -8,7 +8,6 @@ jobs:
     # Setup .npmrc file to publish to GitHub Packages
     - run: | 
         cd $RUNNER_TEMP
-        pwd
         echo "
         //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
         @nikita-bykov:registry=https://npm.pkg.github.com/
@@ -24,4 +23,4 @@ jobs:
     - run: npm install
     - run: npm publish
       env:
-        NPM_CONFIG_USERCONFIG: 
+        NPM_CONFIG_USERCONFIG: "/home/runner/work/_temp"
