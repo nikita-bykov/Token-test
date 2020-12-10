@@ -21,6 +21,6 @@ jobs:
            cd $RUNNER_TEMP
            cat .npmrc
     - run: npm install
-    - run: npm publish
-      env:
-        NPM_CONFIG_USERCONFIG: $RUNNER_TEMP
+    - run: |
+        export NPM_CONFIG_USERCONFIG=$RUNNER_TEMP
+        npm publish
