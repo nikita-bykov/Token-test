@@ -8,14 +8,19 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     # Setup .npmrc file to publish to GitHub Packages
+    - run: | 
+        cd $RUNNER_TEMP
+        echo "
+        //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+        @nikita-bykov:registry=https://npm.pkg.github.com/
+        always-auth=false
+        " > .npmrc
     - uses: nikita-bykov/setup-node@token
       with:
         node-version: '12.x'
-        registry-url: 'https://npm.pkg.github.com'
         scope: '@nikita-bykov'
     - run: |
            cd $RUNNER_TEMP
            cat .npmrc
-           
     - run: npm install
     - run: npm publish
