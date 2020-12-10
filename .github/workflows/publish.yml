@@ -23,4 +23,4 @@ jobs:
     - run: npm install
     - run: npm publish
       env:
-        NPM_CONFIG_USERCONFIG: "/home/runner/work/_temp"
+        NPM_CONFIG_USERCONFIG: "/home/runner/work/_temp/.npmrc"
