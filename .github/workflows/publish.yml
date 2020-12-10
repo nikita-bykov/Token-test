@@ -2,8 +2,6 @@ name: Node.js Package
 on: push
 jobs:
   build:
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
