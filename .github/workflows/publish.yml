@@ -2,6 +2,8 @@ name: Node.js Package
 on: push
 jobs:
   build:
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -12,5 +14,3 @@ jobs:
         registry-url: 'https://npm.pkg.github.com'
     - run: npm install
     - run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
